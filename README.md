@@ -7,9 +7,6 @@ Contributors:
 	<li>
 		<a href="https://www.linkedin.com/in/walid-ouchtiti/">OUCHTITI Walid</a>
 	</li>
-	<li>
-		<a href="https://www.linkedin.com/in/othmane-filali-bb8a77197/">FILALI Othmane</a>
-	</li>
 </ul>
 <br>
 
