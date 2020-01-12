@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>IoT Project</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <script src="JS/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">IoT Project</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="addBuilding.html">Add building<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="addRoom.html">Add room<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="addLight.html">Add light<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="addRinger.html">Add ringer<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="addThermostat.html">Add thermostat<span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!--- Contenue -->
+<div class="container col-md-10 app" style="margin-top: 10px;" id="app">
+    <!--    Error / success messages when deleting-->
+    <div v-if="deleteMessage == 'problem'" class="alert alert-danger" role="alert">
+        Error while deleting the data
+    </div>
+    <div v-if="deleteMessage == 'success'" id="deleteMessage" class="alert alert-success" role="alert">
+        The data has been successfully deleted, you will be redirected to the page after 3 seconds
+    </div>
+
+    <!--    Loading spinner-->
+    <div hidden id="loading" class="spinner-border text-success" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+
+    <section v-if="errored">
+        <p>We are sorry, we are not able to retrieve this information at this time. Please try again later.</p>
+    </section>
+
+    <section v-else>
+        <div v-if="loading" class="spinner-border text-success">
+            <span class="sr-only">Loading...</span>
+        </div>
+        <div v-else>
+
+            <!--            <a href="addRoom.html" class="btn btn-outline-dark float-right" style="margin-bottom:20px; margin-top:80px;">Add Room</a>-->
+            <h1>{{room.name}}</h1>
+            <br>
+            <table class="table table-bordered" style="width:50%; margin-top: 30px;">
+                <thead class="thead-dark">
+                <tr>
+                    <th class="text-center" colspan="2"><b>Auto Thermostat Control: Minimum temperature</b></th>
+                </tr>
+                <tr>
+                    <th class="text-center"><b>Minimum Temperature</b></th>
+                    <th class="text-center"><b>Switch Auto Control</b></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="text-center">
+                        <input type="number" min="0" max="20" v-bind:value="roomController.minTemperature" class="form-control mb-4" v-bind:id="'minTemperature'+room.id">
+                        <button type="button" class="btn btn-success" v-on:click="changeMinTemperature(room.id)">Change temperature</button>
+                    </td>
+
+                    <td class="text-center" v-if="roomController.autoThermostatControlState === 'OFF'" @click="switchAutoThermostatControl(room.id)"><i :id="'auto'+room.id" class="fas fa-toggle-off fa-2x"></i></td>
+                    <td class="text-center" v-else @click="switchAutoThermostatControl(room.id)"><i :id="'auto'+room.id" class="fas fa-toggle-on fa-2x"></i></td>
+                </tr>
+                </tbody>
+            </table>
+
+            <table class="table table-bordered" style="width:100%; margin-top: 30px;">
+                <thead class="thead-dark">
+                <tr>
+                    <th class="text-center"><b>#</b></th>
+                    <th class="text-center"><b>Thermostat Status</b></th>
+                    <th class="text-center"><b>Thermostat Level</b></th>
+                    <th class="text-center"><b>Switch Thermostat</b></th>
+                    <th class="text-center"><b>Delete Thermostat</b></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr v-for="thermostat in thermostats" v-if="thermostat.roomId == roomId">
+                    <td class="text-center">{{thermostat.id}}</td>
+                    <td class="text-center" id="thermostat">{{thermostat.status}}</td>
+                    <td class="text-center">
+                        <input type="number" min="20" max="35" v-bind:value="thermostat.level" class="form-control mb-4" v-bind:id="'thermostatLevel'+thermostat.id">
+                        <button type="button" class="btn btn-success" v-on:click="changeThermostatLevel(thermostat.id)">Change thermostat level</button>
+                    </td>
+                    <td class="text-center" :id="'switchn'+thermostat.id" v-if="thermostat.status === 'ON'" @click="switchThermostat(thermostat.id)"><i class="fas fa-toggle-on fa-2x"></i></td>
+                    <td class="text-center" :id="'switchn'+thermostat.id" @click="switchThermostat(thermostat.id)" v-else><i class="fas fa-toggle-off fa-2x"></i></td>
+                    <td class="text-center" style="color:grey"><button type="button" class="btn btn-danger" v-on:click="deleteThermostat(thermostat.id)">Delete</button></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</div>
+<script src="JS/thermostat.js"></script>
+</body>
+</html>

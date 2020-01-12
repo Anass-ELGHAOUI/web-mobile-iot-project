@@ -1,0 +1,118 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:statusBarColor">@color/blue</item>
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+
+    <!-- action bar -->
+    <style name="action_bar_style">
+        <item name="android:layout_height">@dimen/action_bar_height</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:background">@color/blue</item>
+        <item name="android:elevation">2dp</item>
+    </style>
+
+    <!-- action bar title -->
+    <style name="actionbar_title">
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">marquee</item>
+    </style>
+
+    <!-- action bar settings button -->
+    <style name="actionbar_settings_buttons">
+        <item name="android:layout_width">36dp</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:src">@drawable/ic_dots</item>
+        <item name="android:background">@null</item>
+        <item name="android:layout_alignParentEnd">true</item>
+    </style>
+
+    <!-- action bar settings button -->
+    <style name="actionbar_back_buttons">
+        <item name="android:layout_width">36dp</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:src">@drawable/ic_arrow_left</item>
+        <item name="android:tint">@color/white</item>
+        <item name="android:background">@null</item>
+        <item name="android:layout_alignParentStart">true</item>
+    </style>
+
+    <!-- action bar close buttons -->
+    <style name="actionbar_close_buttons">
+        <item name="android:layout_width">36dp</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:background">@null</item>
+        <item name="android:src">@drawable/ic_cross_icon</item>
+    </style>
+
+    <!-- search text style -->
+    <style name="search_text_style" parent="Widget.AppCompat.Light.SearchView">
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/grey_dark</item>
+        <item name="android:letterSpacing">0.04</item>
+        <item name="android:lineSpacingExtra">15sp</item>
+        <item name="android:textColorHint">@color/grey_dark</item>
+    </style>
+
+    <!-- action bar add buttons -->
+    <style name="actionbar_add_buttons">
+        <item name="android:layout_width">36dp</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:src">@drawable/ic_plus</item>
+        <item name="android:tint">@color/white</item>
+        <item name="android:background">@null</item>
+        <item name="android:layout_alignParentEnd">true</item>
+    </style>
+
+    <style name="edit_text">
+        <item name="android:textColorHint">@color/grey_dark</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <!-- style for button with blue background and white text-->
+    <style name="valide_button_blue">
+        <item name="android:background">@drawable/btn_rounded_8dp</item>
+        <item name="android:backgroundTint">@color/blue</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+
+    </style>
+
+    <!-- style for delete button-->
+    <style name="delete_button">
+        <item name="android:background">@drawable/border_red_btn</item>
+        <item name="android:textColor">#9ffc4b4b</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">match_parent</item>
+
+    </style>
+
+</resources>

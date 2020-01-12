@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">faircorp</string>
+    <string name="buildings">Buildings</string>
+    <string name="empty_result">No result founds</string>
+    <string name="delete">delete</string>
+    <string name="building_name">Building Name</string>
+    <string name="number_of_floors">Number of Floors</string>
+    <string name="rooms">Rooms</string>
+    <string name="room">Room</string>
+    <string name="room_name">Room Name</string>
+    <string name="floor">floor</string>
+    <string name="add_room">add room</string>
+    <string name="add_ringer">add ringer</string>
+    <string name="add_light">add light</string>
+</resources>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>IoT Project</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <script src="JS/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">IoT Project</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="addBuilding.html">Add building<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="addRoom.html">Add room<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="addLight.html">Add light<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="addRinger.html">Add ringer<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="addThermostat.html">Add thermostat<span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!--- Contenue -->
+<!--Add new Room-->
+<div class="container col-md-7" style="margin-top: 50px;" id="addRoom">
+    <!--    Form to add new room -->
+    <form class="text-center border border-light p-5" method="post" @submit.prevent="addRoom">
+        <p class="h4 mb-4">Add Room</p>
+
+        <div v-if="error === true" class="alert alert-danger" role="alert">
+            Error while adding the data
+        </div>
+
+        <div v-if="error === false" class="alert alert-success" role="alert">
+            Data has been successfully added
+        </div>
+
+        <!-- Room Name -->
+        <label class="float-left">Room name</label>
+        <input type="text" id="roomName" class="form-control mb-4" v-model="roomName" required>
+
+        <!-- Building -->
+        <label class="float-left">Building</label>
+        <select class="browser-default custom-select mb-4" id="building" v-model="buildingId" v-on:change="getBuildingFloors($event)">
+            <option value="" disabled selected>Choose a building</option>
+            <option v-for="building in buildings" v-bind:value="building.id">{{building.name}}</option>
+        </select>
+
+        <!-- Floor -->
+        <label class="float-left">Floor</label>
+        <select class="browser-default custom-select mb-4" id="floor" v-model="floor" disabled>
+            <option value="" disabled selected>Choose a floor</option>
+        </select>
+
+        <!-- Lights -->
+        <label class="float-left">Lights</label>
+        <select multiple class="browser-default custom-select mb-4" id="lights" v-model="lightList">
+            <option value="" disabled>Choose lights (Use Ctrl to choose multiple values)</option>
+            <option v-for="light in lights" v-bind:value="light.id">{{light.id}}</option>
+        </select>
+
+        <!-- Ringer -->
+        <label class="float-left">Ringer</label>
+        <select class="browser-default custom-select mb-4" id="ringer" v-model="ringerId">
+            <option value="" disabled selected>Choose a ringer</option>
+            <option v-for="ringer in ringers" v-bind:value="ringer.id">{{ringer.id}}</option>
+        </select>
+
+        <!-- Thermostat -->
+        <label class="float-left">Thermostat</label>
+        <select class="browser-default custom-select mb-4" id="thermostat" v-model="thermostatId">
+            <option value="" disabled selected>Choose a thermostat</option>
+            <option v-for="thermostat in thermostats" v-bind:value="thermostat.id">{{thermostat.id}}</option>
+        </select>
+
+        <!-- Send button -->
+        <button class="btn btn-success btn-block" type="submit">Submit</button>
+    </form>
+</div>
+<script src="JS/addRoom.js"></script>
+</body>
+</html>

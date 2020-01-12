@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        style="@style/action_bar_style">
+
+        <!-- Btn menu -->
+        <ImageButton
+            android:id="@+id/btn_back_lights"
+            style="@style/actionbar_back_buttons"
+            />
+
+        <TextView
+            android:id="@+id/invent_prod_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Lights"
+            style="@style/actionbar_title" />
+
+        <!-- Btn menu -->
+        <ImageButton
+            android:id="@+id/btn_add_light"
+            style="@style/actionbar_add_buttons"
+            />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:focusableInTouchMode="true">
+
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayoutLights"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!-- Recycler view -->
+                    <!--Recycler view for items-->
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/lights_recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="vertical"
+                        android:overScrollMode="never"
+                        android:background="#fff"/>
+
+                    <RelativeLayout
+                        android:id="@+id/search_result_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#fff"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tv_message"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textSize="16sp"
+                            android:drawableTint="@color/grey_dark"
+                            android:textColor="@color/grey_dark"
+                            android:fontFamily="@font/montserrat_semi_bold"
+                            android:text="@string/empty_result"
+                            android:layout_margin="15dp"
+                            android:layout_centerHorizontal="true"
+                            android:visibility="visible"/>
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </android.support.v4.widget.NestedScrollView>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

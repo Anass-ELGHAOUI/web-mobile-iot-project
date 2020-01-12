@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/top_bar"
+            style="@style/action_bar_style"
+            android:layout_width="match_parent">
+
+            <!-- Btn menu -->
+            <ImageButton
+                android:id="@+id/btn_close"
+                style="@style/actionbar_close_buttons"
+                android:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/room_title"
+                style="@style/actionbar_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/add_ringer" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="40dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="27dp"
+                        android:layout_marginStart="2dp"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:text="Ringer Level"
+                        android:textAllCaps="true"
+                        android:textColor="@color/blue"
+                        android:textSize="12sp" />
+
+                    <SeekBar
+                        android:id="@+id/add_ringer_level"
+                        android:max="100"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="27dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginStart="2dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="27dp"
+                            android:fontFamily="@font/montserrat_semi_bold"
+                            android:text="Status"
+                            android:textAllCaps="true"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:layout_alignParentStart="true"
+                            android:textColor="@color/black"
+                            android:textSize="13sp" />
+
+                        <Switch
+                            android:id="@+id/ringer_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_alignParentEnd="true"/>
+                    </RelativeLayout>
+
+                    <Button
+                        android:id="@+id/save_ringer"
+                        style="@style/valide_button_blue"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="30dp"
+                        android:text="Valider" />
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

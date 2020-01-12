@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>IoT Project</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <script src="JS/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">IoT Project</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="addBuilding.html">Add building<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="addRoom.html">Add room<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="addLight.html">Add light<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="addRinger.html">Add ringer<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="addThermostat.html">Add thermostat<span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!--- Contenue -->
+<div class="container col-md-7" style="margin-top: 50px;" id="addroom">
+
+    <form class="text-center border border-light p-5" method="post" @submit.prevent="addThermostat">
+
+        <p class="h4 mb-4">Add Thermostat</p>
+
+        <div v-if="error === true" class="alert alert-danger" role="alert">
+            Error while adding the data
+        </div>
+
+        <div v-if="error === false" class="alert alert-success" role="alert">
+            Data has been successfully added
+        </div>
+
+        <!-- Room -->
+        <label class="float-left">Room</label>
+        <select class="browser-default custom-select mb-4" id="room" v-model="roomId">
+            <option value="" disabled>Choose room</option>
+            <option v-for="room in rooms" v-bind:value="room.id">{{room.name}}</option>
+        </select>
+
+        <!-- Send button -->
+        <button class="btn btn-success btn-block" type="submit">Submit</button>
+
+    </form>
+</div>
+<script src="JS/addThermostat.js"></script>
+</body>
+</html>

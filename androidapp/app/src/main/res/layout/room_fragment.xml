@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/top_bar"
+            style="@style/action_bar_style"
+            android:layout_width="match_parent">
+
+            <!-- Btn menu -->
+            <ImageButton
+                android:id="@+id/btn_close"
+                style="@style/actionbar_close_buttons"
+                android:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/room_title"
+                style="@style/actionbar_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/room" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="40dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="27dp"
+                        android:layout_marginStart="2dp"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:text="@string/room_name"
+                        android:textAllCaps="true"
+                        android:textColor="@color/blue"
+                        android:textSize="12sp" />
+
+                    <EditText
+                        android:id="@+id/et_room_name"
+                        style="@style/edit_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="27dp"
+                        android:layout_marginBottom="4dp"
+                        android:hint="@string/room_name"
+                        android:inputType="text|textCapSentences"
+                        android:maxLines="1"
+                        android:enabled="false"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.7dp"
+                        android:layout_marginBottom="15dp"
+                        android:background="@color/grey_dark" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="27dp"
+                        android:layout_marginStart="2dp"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:text="@string/floor"
+                        android:textAllCaps="true"
+                        android:textColor="@color/blue"
+                        android:textSize="12sp" />
+
+                    <EditText
+                        android:id="@+id/et_floor"
+                        style="@style/edit_text"
+                        android:enabled="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="27dp"
+                        android:layout_marginBottom="4dp"
+                        android:hint="@string/floor"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:maxLines="1" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.7dp"
+                        android:layout_marginBottom="15dp"
+                        android:background="@color/grey_dark" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="27dp"
+                        android:layout_marginStart="2dp"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:text="@string/building_name"
+                        android:textAllCaps="true"
+                        android:textColor="@color/blue"
+                        android:textSize="12sp" />
+
+                    <EditText
+                        android:id="@+id/et_room_building"
+                        style="@style/edit_text"
+                        android:enabled="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="27dp"
+                        android:layout_marginBottom="4dp"
+                        android:hint="@string/building_name"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:maxLines="1" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.7dp"
+                        android:layout_marginBottom="25dp"
+                        android:background="@color/grey_dark" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/lights_layout">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="Lights"
+                            android:layout_alignParentStart="true"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/montserrat_semi_bold"
+                            android:textSize="16sp"/>
+
+                        <ImageView
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerInParent="true"
+                            android:tint="@color/blue"
+                            android:src="@drawable/ic_arrow_right"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="25dp"
+                        android:id="@+id/ringer_layout">
+
+                        <TextView
+                            android:id="@+id/tv_ringer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="Ringer"
+                            android:layout_alignParentStart="true"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/montserrat_semi_bold"
+                            android:textSize="16sp"/>
+
+                        <Switch
+                            android:id="@+id/room_ringer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_alignParentEnd="true"/>
+
+                        <ImageView
+                            android:id="@+id/add_ringer"
+                            android:visibility="gone"
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerInParent="true"
+                            android:tint="@color/blue"
+                            android:src="@drawable/ic_plus"/>
+
+                    </RelativeLayout>
+
+                    <Button
+                        android:id="@+id/btn_save_room"
+                        style="@style/valide_button_blue"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="25dp"
+                        android:text="Valider" />
+
+                    <Button
+                        android:id="@+id/btn_delete_room"
+                        android:text="@string/delete"
+                        style="@style/delete_button"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

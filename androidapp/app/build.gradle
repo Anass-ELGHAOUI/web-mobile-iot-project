@@ -1,0 +1,78 @@
+apply plugin: 'com.android.application'
+
+repositories {
+    maven { url 'https://maven.google.com' }
+    mavenCentral()
+    jcenter()
+    google()
+}
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "emse.anass.faircorp"
+        minSdkVersion 21
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:preference-v7:27.1.1'
+    implementation 'com.android.support:customtabs:27.1.1'
+    implementation 'com.android.support:animated-vector-drawable:27.1.1'
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    //LineChart
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+    // Recycler view
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    // rounded image view
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    // shadow view
+    implementation 'com.loopeer.lib:shadow:0.0.4-beta2'
+
+    // Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.1'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+
+
+    implementation 'com.jakewharton:butterknife:7.0.0'
+    annotationProcessor 'com.jakewharton:butterknife:7.0.0'
+    compileOnly 'org.projectlombok:lombok:1.16.18'
+    annotationProcessor "org.projectlombok:lombok:1.16.18"
+
+    implementation 'com.github.bumptech.glide:glide:4.7.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
+
+    implementation 'android.arch.persistence.room:runtime:1.1.1'
+    annotationProcessor 'android.arch.persistence.room:compiler:1.1.1'
+}
+
+allprojects {
+    repositories {
+        maven { url 'https://jitpack.io' }
+    }
+}

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="38dd0641-0370-442e-b160-edf8a7d5cf23" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../../.gradle/5.6.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../.gradle/5.6.4/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../.gradle/5.6.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../.gradle/5.6.4/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../.gradle/5.6.4/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../.gradle/5.6.4/fileContent/fileContent.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../.gradle/5.6.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../.gradle/5.6.4/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../.gradle/5.6.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../.gradle/5.6.4/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../.gradle/5.6.4/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../.gradle/5.6.4/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../.gradle/5.6.4/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../.gradle/5.6.4/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../build/classes/java/main/com/emse/spring/faircorp/controller/LightController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../build/classes/java/main/com/emse/spring/faircorp/controller/LightController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../build/classes/java/main/com/emse/spring/faircorp/controller/RoomController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../build/classes/java/main/com/emse/spring/faircorp/controller/RoomController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../build/resources/main/static/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../build/resources/main/static/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectId" id="1VLeJeQsPgvqlS8DtFuiNmrwKXF" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="web.server" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="38dd0641-0370-442e-b160-edf8a7d5cf23" name="Default Changelist" comment="" />
+      <created>1577036731135</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1577036731135</updated>
+      <workItem from="1577036732319" duration="2541000" />
+      <workItem from="1577105618698" duration="16960000" />
+      <workItem from="1577190262277" duration="13816000" />
+      <workItem from="1577221933450" duration="6262000" />
+      <workItem from="1577277681846" duration="20520000" />
+      <workItem from="1577308006981" duration="10516000" />
+      <workItem from="1577377409898" duration="5950000" />
+      <workItem from="1577395320228" duration="3787000" />
+      <workItem from="1577403393960" duration="101000" />
+      <workItem from="1577826393176" duration="4635000" />
+      <workItem from="1577902072039" duration="3686000" />
+      <workItem from="1577911389965" duration="4255000" />
+      <workItem from="1577979501079" duration="2701000" />
+      <workItem from="1578064427445" duration="1923000" />
+      <workItem from="1578245206935" duration="4090000" />
+      <workItem from="1578256621398" duration="7011000" />
+      <workItem from="1578294774268" duration="6987000" />
+      <workItem from="1578306264490" duration="235000" />
+      <workItem from="1578315405801" duration="8655000" />
+      <workItem from="1578398410199" duration="368000" />
+      <workItem from="1578404176970" duration="1981000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="416" y="146" width="524" height="498" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1577298275245">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="416" y="146" width="524" height="498" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1366.741@0.27.1366.741" timestamp="1577298275245" />
+    <state x="172" y="32" key="SettingsEditor" timestamp="1577038249196">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="172" y="32" key="SettingsEditor/0.27.1366.741@0.27.1366.741" timestamp="1577038249196" />
+    <state x="347" y="177" key="run.anything.popup" timestamp="1577296739527">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="347" y="177" key="run.anything.popup/0.27.1366.741@0.27.1366.741" timestamp="1577296739527" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1577403457261">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1577403457261" />
+  </component>
+</project>

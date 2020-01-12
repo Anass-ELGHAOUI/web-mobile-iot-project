@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Action bar -->
+    <dimen name="action_bar_height">55dp</dimen>
+
+    <dimen name="margin_left_right">20dp</dimen>
+</resources>
