@@ -24,3 +24,14 @@ Common project for of the three following courses:
 	</li>
 </ul>
 <br>
+Used technologies:
+ 
+<ul>
+	<li>Spring Boot</li>
+	<li>VueJs</li>
+	<li>Android</li>
+	<li>Arduino</li>
+	<li>Rest API</li>
+	<li>MQTT Protocol</li>
+</ul>
+<br>
