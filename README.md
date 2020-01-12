@@ -25,7 +25,8 @@ Common project for of the three following courses:
 </ul>
 <br>
 Used technologies:
- 
+
+<br> 
 <ul>
 	<li>Spring Boot</li>
 	<li>VueJs</li>
